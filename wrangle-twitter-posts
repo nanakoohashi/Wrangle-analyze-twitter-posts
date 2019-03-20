@@ -23,4 +23,36 @@ df = pd.read_csv('twitter-archive-enhanced.csv')
 # In[9]:
 
 
-df.head()
+df.head(20)
+
+
+# In[ ]:
+
+
+
+
+
+# In[4]:
+
+
+folder_name = 'image_predictions'
+if not os.path.exists(folder_name):
+    os.makedirs(folder_name)
+
+
+# In[5]:
+
+
+image_prediction_urls= [' https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv']
+
+
+# In[10]:
+
+
+# Programmatically download file from website
+for url in image_prediction_urls:
+    response = requests.get(url)
+    with open(os.path.join(folder_name, url.split('/')[-1]), mode='wb') as file:
+        file.write(response.content)
+
+
