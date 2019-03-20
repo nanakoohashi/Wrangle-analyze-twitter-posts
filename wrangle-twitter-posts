@@ -18,3 +18,9 @@ import os
 
 # read csv file
 df = pd.read_csv('twitter-archive-enhanced.csv')
+
+
+# In[9]:
+
+
+df.head()
