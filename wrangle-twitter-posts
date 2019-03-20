@@ -11,3 +11,10 @@ from timeit import default_timer as timer
 import pandas as pd
 import requests
 import os
+
+
+# In[2]:
+
+
+# read csv file
+df = pd.read_csv('twitter-archive-enhanced.csv')
