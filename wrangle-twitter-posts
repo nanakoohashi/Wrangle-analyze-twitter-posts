@@ -117,3 +117,9 @@ for line in tweet_json:
 tweet_json.close()
 
 df_new
+
+
+# In[13]:
+
+# Convert df_new from str to int.
+df_new = df_new.astype(str).astype(int)
