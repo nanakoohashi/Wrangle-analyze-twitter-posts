@@ -102,3 +102,18 @@ with open('tweet_json.txt', 'w') as outfile:
 end = timer()
 print(end - start)
 print(fails_dict)
+
+
+# In[12]:
+
+# Create new data frame with id, retweet_count, and favorite_count
+
+tweet_json = open('tweet_json.txt', 'r')
+df_new = pd.DataFrame(columns=['id', 'retweets', 'favorites'])
+
+for line in tweet_json:
+    tweet = json.loads(line)
+    df_new = df_new.append({'id': tweet['id'], 'retweets': tweet['retweet_count'], 'favorites': tweet['favorite_count']}, ignore_index=True)
+tweet_json.close()
+
+df_new
