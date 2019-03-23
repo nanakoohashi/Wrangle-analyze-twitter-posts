@@ -130,3 +130,9 @@ df_new
 
 # Convert df_new from str to int.
 df_new = df_new.astype(str).astype(int)
+
+
+# In[15]:
+
+# Check if there are any favorites values that equal 0.
+df_new[df_new['favorites'] == 0]
