@@ -142,3 +142,9 @@ df_new[df_new['favorites'] == 0]
 
 # Find retweets that are more than favorites in df_new.
 df_new[df_new['retweets'] > df_new['favorites']]
+
+
+# In[17]:
+
+# Find retweets that equal 0 in df_new.
+df_new[df_new['retweets'] == 0]
