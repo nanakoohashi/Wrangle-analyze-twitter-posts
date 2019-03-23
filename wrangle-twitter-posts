@@ -58,6 +58,13 @@ for url in image_prediction_urls:
 
 # In[11]:
 
+# Read and view df_image
+df_image = pd.read_csv('image-predictions (1).tsv', sep='\t')
+df_image
+
+
+# In[12]:
+
 
 # Query Twitter API for each tweet in the Twitter archive and save JSON in a text file
 # These are hidden to comply with Twitter's API terms and conditions
@@ -104,7 +111,7 @@ print(end - start)
 print(fails_dict)
 
 
-# In[12]:
+# In[13]:
 
 # Create new data frame with id, retweet_count, and favorite_count
 
@@ -119,7 +126,7 @@ tweet_json.close()
 df_new
 
 
-# In[13]:
+# In[14]:
 
 # Convert df_new from str to int.
 df_new = df_new.astype(str).astype(int)
