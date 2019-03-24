@@ -17,13 +17,13 @@ import os
 
 
 # read csv file
-df = pd.read_csv('twitter-archive-enhanced.csv')
+df_doggo = pd.read_csv('twitter-archive-enhanced.csv')
 
 
 # In[9]:
 
 
-df.head(20)
+df_doggo.head(20)
 
 
 # In[ ]:
