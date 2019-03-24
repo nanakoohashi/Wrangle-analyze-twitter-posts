@@ -116,35 +116,35 @@ print(fails_dict)
 # Create new data frame with id, retweet_count, and favorite_count
 
 tweet_json = open('tweet_json.txt', 'r')
-df_new = pd.DataFrame(columns=['id', 'retweets', 'favorites'])
+df_tweet_data = pd.DataFrame(columns=['id', 'retweets', 'favorites'])
 
 for line in tweet_json:
     tweet = json.loads(line)
-    df_new = df_new.append({'id': tweet['id'], 'retweets': tweet['retweet_count'], 'favorites': tweet['favorite_count']}, ignore_index=True)
+    df_tweet_data = df_tweet_data.append({'id': tweet['id'], 'retweets': tweet['retweet_count'], 'favorites': tweet['favorite_count']}, ignore_index=True)
 tweet_json.close()
 
-df_new
+df_tweet_data
 
 
 # In[14]:
 
 # Convert df_new from str to int.
-df_new = df_new.astype(str).astype(int)
+df_tweet_data = df_tweet_data.astype(str).astype(int)
 
 
 # In[15]:
 
 # Check if there are any favorites values that equal 0 in df_new.
-df_new[df_new['favorites'] == 0]
+df_tweet_data[df_tweet_data['favorites'] == 0]
 
 
 # In[16]:
 
 # Find retweets that are more than favorites in df_new.
-df_new[df_new['retweets'] > df_new['favorites']]
+df_tweet_data[df_tweet_data['retweets'] > df_tweet_data['favorites']]
 
 
 # In[17]:
 
 # Find retweets that equal 0 in df_new.
-df_new[df_new['retweets'] == 0]
+df_tweet_data[df_tweet_data['retweets'] == 0]
