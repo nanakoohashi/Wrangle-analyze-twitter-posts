@@ -35,11 +35,6 @@ df_doggo = df.copy()
 df_doggo.head(20)
 
 
-# In[ ]:
-
-
-
-
 
 # In[4]:
 
@@ -152,9 +147,16 @@ df_tweet_data = df_tweet.copy()
 
 # # Assessing Data
 
+
+# In[ ]:
+
+# Assess df_doggo using .info()
+df_doggo.info()
+
+
 # In[14]:
 
-# Convert df_new from str to int.
+# Convert df_tweet_data from str to int.
 df_tweet_data = df_tweet_data.astype(str).astype(int)
 
 
