@@ -132,14 +132,22 @@ print(fails_dict)
 # Create new data frame with id, retweet_count, and favorite_count
 
 tweet_json = open('tweet_json.txt', 'r')
-df_tweet_data = pd.DataFrame(columns=['id', 'retweets', 'favorites'])
+df_tweet = pd.DataFrame(columns=['id', 'retweets', 'favorites'])
 
 for line in tweet_json:
     tweet = json.loads(line)
-    df_tweet_data = df_tweet_data.append({'id': tweet['id'], 'retweets': tweet['retweet_count'], 'favorites': tweet['favorite_count']}, ignore_index=True)
+    df_tweet = df_tweet_data.append({'id': tweet['id'], 'retweets': tweet['retweet_count'], 'favorites': tweet['favorite_count']}, ignore_index=True)
 tweet_json.close()
 
-df_tweet_data
+df_tweet
+
+
+# In[ ]:
+
+
+# Make a copy of df_tweet
+df_tweet_data = df_tweet.copy()
+
 
 
 # # Assessing Data
