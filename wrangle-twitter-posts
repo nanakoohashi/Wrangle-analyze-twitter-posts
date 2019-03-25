@@ -68,8 +68,15 @@ for url in image_prediction_urls:
 # In[11]:
 
 # Read and view df_image
-df_image = pd.read_csv('image-predictions (1).tsv', sep='\t')
-df_image
+df_i = pd.read_csv('image-predictions (1).tsv', sep='\t')
+
+
+
+# In[ ]:
+
+# Make a copy of df_i
+df_image = df_i.copy()
+
 
 
 # In[12]:
