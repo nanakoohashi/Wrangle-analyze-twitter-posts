@@ -162,8 +162,14 @@ df_tweet_data.info()
 
 # In[ ]:
 
-# Make sure numerators are consistent
+# Make sure numerators are consistent.
 df_doggo.rating_numerator.unique()
+
+
+# In[ ]:
+
+# Check for any numerators that equal zero.
+df_doggo[df_doggo.rating_numerator == 0]
 
 
 # In[14]:
