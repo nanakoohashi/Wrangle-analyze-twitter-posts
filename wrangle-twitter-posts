@@ -159,6 +159,13 @@ df_image.info()
 # Check data types are compatible and columns are not missing entries.
 df_tweet_data.info()
 
+
+# In[ ]:
+
+# Make sure numerators are consistent
+df_doggo.rating_numerator.unique()
+
+
 # In[14]:
 
 # Convert df_tweet_data from str to int.
