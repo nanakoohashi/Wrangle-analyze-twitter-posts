@@ -154,6 +154,11 @@ df_doggo.info()
 df_image.info()
 
 
+# In[ ]:
+
+# Check data types are compatible and columns are not missing entries.
+df_tweet_data.info()
+
 # In[14]:
 
 # Convert df_tweet_data from str to int.
