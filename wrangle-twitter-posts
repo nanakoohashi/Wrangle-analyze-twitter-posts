@@ -172,6 +172,12 @@ df_doggo.rating_numerator.unique()
 df_doggo[df_doggo.rating_numerator == 0]
 
 
+# In[ ]:
+
+# Make sure denominators are consistent
+df_doggo.rating_denominator.unique()
+
+
 # In[14]:
 
 # Convert df_tweet_data from str to int.
