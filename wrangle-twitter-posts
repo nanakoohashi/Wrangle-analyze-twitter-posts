@@ -184,6 +184,12 @@ df_doggo.rating_denominator.unique()
 df_doggo[df_doggo.rating_denominator == 0]
 
 
+# In[ ]:
+
+# Detect entries where there are more than one dog stage.
+df_doggo.loc[(df_doggo[['doggo', 'floofer', 'pupper', 'puppo']] != 'None').sum(axis=1) > 1]
+
+
 # In[14]:
 
 # Convert df_tweet_data from str to int.
