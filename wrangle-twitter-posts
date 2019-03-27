@@ -192,7 +192,7 @@ df_doggo.loc[(df_doggo[['doggo', 'floofer', 'pupper', 'puppo']] != 'None').sum(a
 
 # In[14]:
 
-# Convert df_tweet_data from str to int.
+# Convert all entries in df_tweet_data to integer to help assess data further.
 df_tweet_data = df_tweet_data.astype(str).astype(int)
 
 
@@ -213,3 +213,8 @@ df_tweet_data[df_tweet_data['retweets'] > df_tweet_data['favorites']]
 # Find retweets that equal 0 in df_new.
 df_tweet_data[df_tweet_data['retweets'] == 0]
 
+
+# In[ ]:
+
+# See if there are any dupulicates in the data frame.
+sum(df_tweet_data.duplicated())
