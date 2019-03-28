@@ -230,3 +230,35 @@ sum(df_image.duplicated())
 
 # See if there are any duplicates in the data frame.
 sum(df_doggo.duplicated())
+
+# ## Detect and document at least eight (8) quality issues and two (2) tidiness issues
+# Quality issue dimensions are:
+# 1. `Completeness`: do we have all of the records that we should? Do we have missing records or not? Are there specific rows, columns, or cells missing?
+# 2. `Validity`: we have the records, but they’re not valid, i.e., they don’t conform to a defined schema. A schema is a defined set of rules for data. These rules can be real-world constraints (e.g. negative height is impossible) and table-specific constraints (e.g. unique key constraints in tables).
+# 3. `Accuracy`: inaccurate data is wrong data that is valid. It adheres to the defined schema, but it is still incorrect. Example: a patient’s weight that is 5 lbs too heavy because the scale was faulty.
+# 4. `Consistency`: inconsistent data is both valid and accurate, but there are multiple correct ways of referring to the same thing. Consistency, i.e., a standard format, in columns that represent the same data across tables and/or within tables is desired.
+# 
+# Tidy Data requirements:
+# 1. Each variable forms a column.
+# 2. Each observation forms a row.
+# 3. Each type of observational unit forms a table.
+# 
+# ### Quality Issues
+# 
+# 1. Missing values for dog stage (incomplete data for doggo, floofer, pupper, puppo) in `df_doggo`.
+# 2. Multiple values for dog stage in `df_doggo`.
+# 3. Rating numerators and  rating denominators values are incorrect in `df_doggo`.
+# 4. Remove entries that are retweets in `df_doggo`.
+# 5. Replace 'None' with 'NaN' for all dog stages in `df_doggo`.
+# 6. Columns pertaining to retweets and expanded URLs are unnecessary in `df_doggo`.
+# 7. Remove entries where p1_dog, p2_dog, and p3_dog are all "False" in `df_image`.
+# 8. Values for p1, p2, and p3 sometimes capitalized but not always in `df_image`.
+# 9. All columns in `df_tweet_data` should be integers.
+# 10. 167 rows missing data for `favorites` in `df_tweet_data`.
+# 
+# 
+# ### Tidiness Issues
+# 1. Doggo, floofer, pupper, puppo are one variable spread across different columns in `df_doggo`. 
+# 2. rating_numerator and rating_denominator can be combined into one column in `df_doggo`.
+# 3. Combine data frames by tweet_id.
+# 
