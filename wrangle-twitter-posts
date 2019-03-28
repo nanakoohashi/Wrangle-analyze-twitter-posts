@@ -262,3 +262,24 @@ sum(df_doggo.duplicated())
 # 2. rating_numerator and rating_denominator can be combined into one column in `df_doggo`.
 # 3. Combine data frames by tweet_id.
 # 
+# # Cleaning Data
+
+# ## Quality Issues
+
+# ### 1. Missing values for dog stage (incomplete data for `doggo`, `floofer`, `pupper`, `puppo`) in `df_doggo`.
+# - Remove rows that contain "None" values for all dog stages.
+
+# #### Code
+
+# In[25]:
+
+
+df_doggo_1 = df_doggo.query('doggo != "None" or floofer != "None" or pupper != "None" or puppo != "None"')
+
+
+# #### Test
+
+# In[26]:
+
+
+df_doggo_1
