@@ -216,5 +216,11 @@ df_tweet_data[df_tweet_data['retweets'] == 0]
 
 # In[ ]:
 
-# See if there are any dupulicates in the data frame.
+# See if there are any duplicates in the data frame.
 sum(df_tweet_data.duplicated())
+
+
+# In[ ]:
+
+# See if there are any duplicates in the data frame.
+sum(df_image.duplicated())
