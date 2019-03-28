@@ -224,3 +224,9 @@ sum(df_tweet_data.duplicated())
 
 # See if there are any duplicates in the data frame.
 sum(df_image.duplicated())
+
+
+# In[ ]:
+
+# See if there are any duplicates in the data frame.
+sum(df_doggo.duplicated())
