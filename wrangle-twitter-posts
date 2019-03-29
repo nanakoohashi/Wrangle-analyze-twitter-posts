@@ -381,3 +381,27 @@ df_doggo_2 = df_doggo_1.query('retweeted_status_id == "NaN"')
 # Test to see if retweet columns contain any values.
 
 df_doggo_2.info()
+
+
+
+# ### 5. Replace 'None' with 'NaN' for all dog stages in `df_doggo`.
+
+# #### Code
+
+# In[39]:
+
+
+df_doggo_2['doggo'] = np.where(df_doggo_2['doggo'] == 'None' , np.nan, df_doggo_2['doggo'])
+df_doggo_2['floofer'] = np.where(df_doggo_2['floofer'] == 'None' , np.nan, df_doggo_2['floofer'])
+df_doggo_2['pupper'] = np.where(df_doggo_2['pupper'] == 'None' , np.nan, df_doggo_2['pupper'])
+df_doggo_2['puppo'] = np.where(df_doggo_2['puppo'] == 'None' , np.nan, df_doggo_2['puppo'])
+
+
+# #### Test
+
+# In[40]:
+
+
+df_doggo_2
+
+
