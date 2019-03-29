@@ -305,3 +305,58 @@ df_doggo_1 = df_doggo_1.loc[(df_doggo_1[['doggo', 'floofer', 'pupper', 'puppo']]
 
 df_doggo_1.loc[(df_doggo_1[['doggo', 'floofer', 'pupper', 'puppo']] != 'None').sum(axis=1) > 1]
 
+
+
+# ### 3. `rating_numerators` and  `rating_denominator` values are incorrect in `df_doggo`.
+
+# #### Code
+
+# In[29]:
+
+
+df_doggo_1['rating_denominator'].unique()
+
+
+# In[30]:
+
+
+df_doggo_1['rating_numerator'].unique()
+
+
+# In[31]:
+
+
+df_doggo_1['rating_numerator'] = df_doggo_1.text.str.extract('((?:\d+\.)?\d+)\/(\d+)', expand=True)
+
+
+# In[32]:
+
+
+df_doggo_1['rating_numerator'] = df_doggo_1['rating_numerator'].astype(str).astype(float)
+
+
+# In[33]:
+
+
+df_doggo_1['rating_denominator'] = df_doggo_1['rating_denominator'].astype(str).astype(float)
+
+
+# #### Test
+
+# In[34]:
+
+
+df_doggo_1['rating_denominator'].unique()
+
+
+# In[35]:
+
+
+df_doggo_1['rating_numerator'].unique()
+
+
+# In[36]:
+
+
+# Make sure that numerator and denominator are in compatible format
+df_doggo_1['rating_numerator'] / df_doggo_1['rating_denominator']
