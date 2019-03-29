@@ -360,3 +360,24 @@ df_doggo_1['rating_numerator'].unique()
 
 # Make sure that numerator and denominator are in compatible format
 df_doggo_1['rating_numerator'] / df_doggo_1['rating_denominator']
+
+
+
+# ### 4. Remove entries that are retweets in `df_doggo`.
+
+# #### Code
+
+# In[37]:
+
+
+df_doggo_2 = df_doggo_1.query('retweeted_status_id == "NaN"')
+
+
+# #### Test
+
+# In[38]:
+
+
+# Test to see if retweet columns contain any values.
+
+df_doggo_2.info()
