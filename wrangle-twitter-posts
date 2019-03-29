@@ -283,3 +283,25 @@ df_doggo_1 = df_doggo.query('doggo != "None" or floofer != "None" or pupper != "
 
 
 df_doggo_1
+
+
+# ### 2. Multiple values for dog stage in `df_doggo`.
+
+# - Remove rows that contain multiple values for all dog stages.
+
+# #### Code
+
+# In[27]:
+
+
+# Remove entries where there are more than one dog stage
+df_doggo_1 = df_doggo_1.loc[(df_doggo_1[['doggo', 'floofer', 'pupper', 'puppo']] != 'None').sum(axis=1) == 1]
+
+
+# #### Test
+
+# In[28]:
+
+
+df_doggo_1.loc[(df_doggo_1[['doggo', 'floofer', 'pupper', 'puppo']] != 'None').sum(axis=1) > 1]
+
