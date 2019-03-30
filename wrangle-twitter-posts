@@ -461,3 +461,21 @@ df_image_1.p1.str.lower()
 
 df_image_1
 
+
+
+# ### 9. All columns in df_tweet_data should be integers.
+# - This was completed while assessing data in order to properly assess the data.
+
+# #### Code
+
+# df_tweet_data was converted to an integer in the Assess Data section using the following code:
+# `df_tweet_data = df_tweet_data.astype(str).astype(int)`
+
+# #### Test
+
+# In[47]:
+
+
+df_tweet_data.info()
+
+
