@@ -405,3 +405,22 @@ df_doggo_2['puppo'] = np.where(df_doggo_2['puppo'] == 'None' , np.nan, df_doggo_
 df_doggo_2
 
 
+
+# ### 6. Columns pertaining to retweets and expanded URLs are unnecessary in df_doggo.
+
+# #### Code
+
+# In[41]:
+
+
+df_doggo_2.drop(columns=['retweeted_status_id','retweeted_status_user_id', 'retweeted_status_timestamp', 'expanded_urls', 'source'], inplace=True)
+
+
+# #### Test
+
+# In[42]:
+
+
+df_doggo_2
+
+
