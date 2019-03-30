@@ -442,3 +442,22 @@ df_image_1 = df_image.query('p1_dog == True or p2_dog == True or p3_dog == True'
 
 df_image_1.query('p1_dog == False & p2_dog == False & p3_dog == False')
 
+
+
+# ### 8. Values for p1, p2, and p3 sometimes capitalized but not always in df_image.
+
+# #### Code
+
+# In[45]:
+
+
+df_image_1.p1.str.lower()
+
+
+# #### Test
+
+# In[46]:
+
+
+df_image_1
+
