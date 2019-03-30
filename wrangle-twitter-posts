@@ -424,3 +424,21 @@ df_doggo_2.drop(columns=['retweeted_status_id','retweeted_status_user_id', 'retw
 df_doggo_2
 
 
+
+# ### 7. Remove entries where `p1_dog`, `p2_dog`, and `p3_dog` are all "False" in `df_image`.
+
+# #### Code
+
+# In[43]:
+
+
+df_image_1 = df_image.query('p1_dog == True or p2_dog == True or p3_dog == True')
+
+
+# #### Test
+
+# In[44]:
+
+
+df_image_1.query('p1_dog == False & p2_dog == False & p3_dog == False')
+
