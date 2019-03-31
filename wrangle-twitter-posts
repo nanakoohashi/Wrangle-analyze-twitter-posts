@@ -553,3 +553,20 @@ df_doggo_2.drop(columns=['rating_numerator','rating_denominator'], inplace=True)
 
 df_doggo_2
 
+
+
+# ### 3. Combine dataframes by tweet_id
+
+# In[56]:
+
+
+df_merge = pd.merge(df_image_1, df_doggo_2, on=['tweet_id'])
+df_merge
+
+
+# In[57]:
+
+
+df_merge = pd.merge(df_merge, df_tweet_data_1, on=['tweet_id'])
+df_merge
+
