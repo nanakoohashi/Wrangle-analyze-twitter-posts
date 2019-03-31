@@ -527,3 +527,29 @@ df_doggo_2 = df_doggo_2.rename(index=str, columns={"doggo": "dog_stages"})
 
 df_doggo_2
 
+
+
+# ### 2. rating_numerator and rating_denominator can be combined into one column in `df_doggo`.
+
+# #### Code
+
+# In[53]:
+
+
+df_doggo_2['rating_percent'] = df_doggo_2.rating_numerator/df_doggo_2.rating_denominator
+df_doggo_2
+
+
+# In[54]:
+
+
+df_doggo_2.drop(columns=['rating_numerator','rating_denominator'], inplace=True)
+
+
+# #### Test
+
+# In[55]:
+
+
+df_doggo_2
+
