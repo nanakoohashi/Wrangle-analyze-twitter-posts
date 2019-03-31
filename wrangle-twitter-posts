@@ -479,3 +479,19 @@ df_image_1
 df_tweet_data.info()
 
 
+
+# ### 10. 167 rows missing data for `favorites` in `df_tweet_data`.
+
+# #### Code
+
+# In[48]:
+
+
+df_tweet_data_1 = df_tweet_data.query('favorites != "0"')
+
+
+# #### Test
+
+# In[49]:
+
+
