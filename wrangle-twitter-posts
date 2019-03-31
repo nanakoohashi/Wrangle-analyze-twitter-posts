@@ -494,4 +494,36 @@ df_tweet_data_1 = df_tweet_data.query('favorites != "0"')
 
 # In[49]:
 
+df_tweet_data_1.query('favorites == "0"')
+
+
+
+# ## Tidiness Issues
+
+# ### 1. Doggo, floofer, pupper, puppo are one variable spread across different columns in df_doggo.
+
+# #### Code
+
+# In[50]:
+
+
+df_doggo_2['doggo'] = df_doggo_2['doggo'].fillna(df_doggo_2['floofer'])
+df_doggo_2['doggo'] = df_doggo_2['doggo'].fillna(df_doggo_2['pupper'])
+df_doggo_2['doggo'] = df_doggo_2['doggo'].fillna(df_doggo_2['puppo'])
+df_doggo_2.drop(columns=['floofer','pupper', 'puppo'], inplace=True)
+df_doggo_2
+
+
+# In[51]:
+
+
+df_doggo_2 = df_doggo_2.rename(index=str, columns={"doggo": "dog_stages"})
+
+
+# #### Test
+
+# In[52]:
+
+
+df_doggo_2
 
