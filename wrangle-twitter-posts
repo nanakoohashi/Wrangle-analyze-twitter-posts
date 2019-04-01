@@ -590,3 +590,12 @@ df_merge.to_csv('twitter_archive_master.csv', index=False)
 
 df_merge.p1_dog.mean()
 
+
+
+# #### 2. Number of Favorites for each Dog Stage.
+
+# In[60]:
+
+
+df_merge.groupby(['dog_stages'])['favorites'].mean()
+
