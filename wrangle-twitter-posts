@@ -579,3 +579,14 @@ df_merge
 
 df_merge.to_csv('twitter_archive_master.csv', index=False)
 
+
+
+# ## Insights
+
+# #### 1. p1 predicts that it is a dog 87% of the time.
+
+# In[59]:
+
+
+df_merge.p1_dog.mean()
+
