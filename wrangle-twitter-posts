@@ -599,3 +599,13 @@ df_merge.p1_dog.mean()
 
 df_merge.groupby(['dog_stages'])['favorites'].mean()
 
+
+
+# #### 3. Number of Retweets for each Dog Stage
+
+# In[61]:
+
+
+df_merge.groupby(['dog_stages'])['retweets'].mean()
+
+
