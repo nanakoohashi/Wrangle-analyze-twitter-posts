@@ -570,3 +570,12 @@ df_merge
 df_merge = pd.merge(df_merge, df_tweet_data_1, on=['tweet_id'])
 df_merge
 
+
+
+# ## Store the clean DataFrame in a CSV file
+
+# In[58]:
+
+
+df_merge.to_csv('twitter_archive_master.csv', index=False)
+
