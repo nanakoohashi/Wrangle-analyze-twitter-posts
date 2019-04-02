@@ -635,3 +635,14 @@ stage_rating_avg.to_frame()
 stage_rating_avg1 = stage_rating_avg.reset_index(level=['dog_stages'])
 stage_rating_avg1.sort_values(by='rating_percent', ascending=False)
 
+
+# In[65]:
+
+
+g = sns.barplot(data=stage_rating_avg1, x="dog_stages", y="rating_percent")
+g.set_xticklabels(g.get_xticklabels(), rotation=90)
+ax = plt.gca()
+ax.set_title("Average Rating Percent by Dog Stage")
+plt.xlabel("Dog Stages")
+plt.ylabel("Average Rating Percent")
+
