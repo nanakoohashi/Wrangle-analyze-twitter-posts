@@ -628,3 +628,10 @@ stage_rating_avg = df_merge.groupby(['dog_stages'])['rating_percent'].mean()
 stage_rating_avg.to_frame()
 
 
+
+# In[64]:
+
+
+stage_rating_avg1 = stage_rating_avg.reset_index(level=['dog_stages'])
+stage_rating_avg1.sort_values(by='rating_percent', ascending=False)
+
