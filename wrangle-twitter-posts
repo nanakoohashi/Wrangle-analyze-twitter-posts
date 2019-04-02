@@ -609,3 +609,14 @@ df_merge.groupby(['dog_stages'])['favorites'].mean()
 df_merge.groupby(['dog_stages'])['retweets'].mean()
 
 
+
+# ## Visualize the Data
+
+# #### 1. Average Rating Percent for each Dog Stage
+
+# In[62]:
+
+
+# calculate mean ratings by dog stage
+stage_rating_avg = df_merge.groupby(['dog_stages'])['rating_percent'].mean()
+
