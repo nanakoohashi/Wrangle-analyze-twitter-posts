@@ -620,3 +620,11 @@ df_merge.groupby(['dog_stages'])['retweets'].mean()
 # calculate mean ratings by dog stage
 stage_rating_avg = df_merge.groupby(['dog_stages'])['rating_percent'].mean()
 
+
+# In[63]:
+
+
+# convert series to a data frame
+stage_rating_avg.to_frame()
+
+
