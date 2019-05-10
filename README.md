@@ -8,7 +8,6 @@ The dataset is the tweet archive of Twitter user @dog_rates, also known as WeRat
 
 ## Getting Started
 ### Dependencies
-Describe any prerequisites, libraries, OS version, etc., needed before installing program.
 Windows 10
 
 #### Libraries
