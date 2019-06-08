@@ -10,7 +10,7 @@ The dataset is the tweet archive of Twitter user @dog_rates, also known as WeRat
 ### Dependencies
 Windows 10
 
-#### Libraries
+### Libraries
 - tweepy
 - json
 - timeit 
