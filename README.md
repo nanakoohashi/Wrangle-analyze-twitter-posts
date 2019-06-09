@@ -38,3 +38,14 @@ I used the Pandas `.groupby().mean()` function to find out which dog stage yield
 time the ‘doggo’ stage yielded the most retweets on average (approximately 7,001 retweets per tweet),
 followed by ‘puppo’ (approximately 6,143 retweets per tweet), followed by ‘floofer’ (approximately 4,641
 retweets per tweet), followed by ‘pupper’ (approximately 2,281 retweets per tweet).
+
+### Visualizing the data
+#### Average Rating Percent for each Dog Stage
+I used the Pandas `.groupby().mean()` function to calculate the mean rating percent by dog stage and then
+converted the series to a data frame by using the Pandas `.to_frame() function. I used Pandas `reset_index()` function to convert dog_stages from index to column and then used `.sort_values()` to order
+the dog stages by descending rating percent values.
+
+I then plotted the data as a bar plot using Seaborn.
+
+‘Floofer’ received the highest rating on average (1.200), followed by ‘puppo’ (1.195), followed by ‘doggo’
+(1.193), followed by ‘pupper’ (1.086).
