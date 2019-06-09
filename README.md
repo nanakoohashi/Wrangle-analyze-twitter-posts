@@ -20,3 +20,21 @@ Windows 10
 - os 
 - matplotlib
 - seaborn
+
+## Findings
+### p1 predicts that the tweet image is a dog 87% of the time.
+I used the Pandas `.mean()` function to find out how often the neural network was able to predict a breed of
+dog based on a tweet image for its first prediction. The function revealed that the neural network was able
+to do this 87% of the time. This means that 13% of neural network’s first predictions were not a breed of
+dog. Perhaps this is something that can be improved in the future so that the first predictions are able to
+predict dog breed with better accuracy.
+### Number of Favorites for each Dog Stage.
+I used the Pandas `.groupby().mean()` function to find out which dog stage yielded the most favorites on
+average. The ‘puppo’ dog stage yielded the most favorites on average (approximately 21,577 per tweet),
+followed by ‘doggo’ (approximately 20,242 favorites per tweet), followed by ‘floofer’ (approximately 12,581
+favorites per tweet), followed by ‘pupper’ (approximately 7,276 favorites per tweet).
+### Number of Retweets for each Dog Stage
+I used the Pandas `.groupby().mean()` function to find out which dog stage yielded the most retweets. This
+time the ‘doggo’ stage yielded the most retweets on average (approximately 7,001 retweets per tweet),
+followed by ‘puppo’ (approximately 6,143 retweets per tweet), followed by ‘floofer’ (approximately 4,641
+retweets per tweet), followed by ‘pupper’ (approximately 2,281 retweets per tweet).
