@@ -8,7 +8,8 @@ The dataset is the tweet archive of Twitter user @dog_rates, also known as WeRat
 
 ## Getting Started
 ### Dependencies
-Windows 10
+- Windows 10
+- Python 3
 
 ### Libraries
 - tweepy
